@@ -83,6 +83,7 @@ img {
   gap: 40px;
 }
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -107,7 +108,15 @@ img {
 .nav-link.curent {
   color: var(--pressed-state-color);
 }
-
+.nav-link.curent::after {
+  content: '';
+  width: 64px;
+  height: 4px;
+  background-color: var(--pressed-state-color);
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
 .nav-link:hover,
 .nav-link:focus {
   color: var(--pressed-state-color);
