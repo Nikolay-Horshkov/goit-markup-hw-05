@@ -112,10 +112,11 @@ img {
 }
 .nav-link.curent::after {
   content: '';
-  width: 64px;
+  width: 48px;
   height: 4px;
   background-color: var(--pressed-state-color);
   display: block;
+  border-radius: 2px;
   position: absolute;
   bottom: 0;
 }
@@ -172,7 +173,6 @@ img {
   max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
-  /* outline: 2px solid red; */
 }
 .hero-title {
   margin-bottom: 48px;
@@ -192,6 +192,7 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  cursor: pointer;
   letter-spacing: 0.04em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: #ffffff;
@@ -374,6 +375,8 @@ img {
 }
 .customers-icon {
   fill: var(--subtle-text-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:is(:hover, :focus) {
   border-color: var(--pressed-state-color);
@@ -574,6 +577,7 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
